@@ -24,7 +24,7 @@ class User extends CI_Controller{
 		);
 		$this->load->model('main_model');
 		$this->main_model->tambah($data);
-		$this->load->view('user');
+		$this->load->view('user_form_v');
 	   }
 	}
 ?>

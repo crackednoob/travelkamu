@@ -5,7 +5,7 @@
 	
 </head>
 <body>
-	<form action="http://localhost/travelkamu/user/add" method="post">
+	<form action="http://localhost/travelkamu/index.php/User/add" method="post">
 		<table>
 		<tr>
 			<td>ID</td> <td>:</td><td><input type="text" name="id"></td>
