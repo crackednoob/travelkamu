@@ -5,11 +5,13 @@
     </head>
     <body>
         <form action="#" method="post">
-            ID :<input type="text" name="id"></br>
             Username :<input type="text" name="username"></br>
             Password :<input type="password" name="password"></br>
             Fullname :<input type="text" name="fullname"></br>
-            Level :<input type="text" name="level"></br>
+            Level :<select name="Faiz">
+                <option value="0">User</option>
+                <option value="1">Admin</option>
+            </select>
             <input type="button" name="submit" value="Submit">
         </form>
     </body>

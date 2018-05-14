@@ -5,18 +5,27 @@ class User extends CI_Controller{
 	}*/
 
 	public function index(){
+		// $this->load->model('main_model');
+
+		// $v_data['tbuser'] = $this->main_model->gets();
+
 		$this->load->view('user_form_v');
-		//$this->main_model('tambah')	;
+	}
+
+	public function view_data(){
+		$this->load->model('main_model');
+
+		$v_data['tbuser'] = $this->main_model->gets();
+
+		$this->load->view('user_data', $v_data);
 	}
 	
 	public function add(){
-		$id = $this->input->post('id');
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
 		$fullname = $this->input->post('fullname');
 		$level = $this->input->post('level');
 		$data = array(
-			'id' => $id,
 			'username' => $username,
 			'password' => $password,
 			'fullname' => $fullname,
@@ -27,4 +36,13 @@ class User extends CI_Controller{
 		$this->load->view('user_form_v');
 	   }
 	}
+
+	function del($id){
+		$this->load->model('main_model');
+
+		$this->main_model->del($id);
+
+	}
+	function edit($id){}
+	function detail($id){}
 ?>
